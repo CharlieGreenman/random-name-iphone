@@ -1,0 +1,21 @@
+{
+  "name": "random-name-iphone-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/random-name-iphone-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": [
+        "{workspaceRoot}/dist/.playwright/apps/random-name-iphone-e2e"
+      ],
+      "options": {
+        "config": "apps/random-name-iphone-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "implicitDependencies": ["random-name-iphone"]
+}
